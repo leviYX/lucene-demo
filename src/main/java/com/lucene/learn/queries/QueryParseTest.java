@@ -24,7 +24,7 @@ public class QueryParseTest {
         queryParser.setDefaultOperator(QueryParser.Operator.AND);
 
         Query query = queryParser.parse("农村学生");
-        System.out.println(query.toString());
+        System.out.println("dsl：" + query.toString());
 
         TopDocs tds = searcher.search(query, 10);
         ScoreDoc[] scoreDocs = tds.scoreDocs;
